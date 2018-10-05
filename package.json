@@ -1,0 +1,24 @@
+{
+  "name": "brainz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "brainz": "^0.2.6",
+    "musicbrainz": "^0.2.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicktamburro/musicBrainz.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicktamburro/musicBrainz/issues"
+  },
+  "homepage": "https://github.com/nicktamburro/musicBrainz#readme"
+}
