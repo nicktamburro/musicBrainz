@@ -1,4 +1,6 @@
 const mb = require('musicbrainz');
+
+
 /*
 mb.lookupRelease('283821f3-522a-45ca-a669-d74d0b4fb93a', ['artists'], function (error, release) {
     console.log(release);
@@ -10,6 +12,6 @@ mb.lookupRelease('283821f3-522a-45ca-a669-d74d0b4fb93a', ['artists'], function (
 /*mb.searchRecordings('Seven Nation Army', { artist: 'The White Stripes' }, function(err, recordings){
     console.log(recordings);
 });*/
-mb.searchReleases('Elephant', { country: 'US' }, function(err, releases){
+mb.searchReleases('Elephant', { country: 'US', artist: 'The White Stripes' }, function(err, releases){
     console.log(releases);
 });
