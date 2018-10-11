@@ -1,6 +1,7 @@
 const mb = require('musicbrainz');
 
 //LOOK UP RELEASE BY... what? ID?
+//and we need to get body-parser, and probably some json middleware in here...
   
 mb.lookupRelease('283821f3-522a-45ca-a669-d74d0b4fb93a', ['artists'], function (error, release) {
     console.log(release);
@@ -23,3 +24,14 @@ mb.searchRecordings('Amen, Brother', { artist: 'The Winstons' }, function(err, r
 *mb.searchReleases('Elephant', { country: 'US', artist: 'The White Stripes' }, function(err, releases){
     console.log(releases);
 });
+
+//AND THEN, after we've established a musicBrainz ID, we pass it to acoustic brainz, to get
+//more data... like
+
+function getAcousticBrainz(musicBrainzID){
+
+//then write our API call here... 
+
+GET https://acousticbrainz.org/api/v1/96685213-a25c-4678-9a13-abd9ec81cf35/low-level
+   GET https://acousticbrainz.org/api/v1/96685213-a25c-4678-9a13-abd9ec81cf35/high-level
+};
