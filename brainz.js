@@ -21,17 +21,17 @@ mb.searchRecordings('Amen, Brother', { artist: 'The Winstons' }, function(err, r
 
 //SEARCH RELEASES
 //so the parameters to narrow it down go in the {}'s, we still have to pare down all the data we get
-*mb.searchReleases('Elephant', { country: 'US', artist: 'The White Stripes' }, function(err, releases){
+mb.searchReleases('Elephant', { country: 'US', artist: 'The White Stripes' }, function(err, releases){
     console.log(releases);
 });
 
 //AND THEN, after we've established a musicBrainz ID, we pass it to acoustic brainz, to get
 //more data... like
 
-function getAcousticBrainz(musicBrainzID){
+//function getAcousticBrainz(musicBrainzID){
 
 //then write our API call here... 
 
-GET https://acousticbrainz.org/api/v1/96685213-a25c-4678-9a13-abd9ec81cf35/low-level
-   GET https://acousticbrainz.org/api/v1/96685213-a25c-4678-9a13-abd9ec81cf35/high-level
-};
+//GET https://acousticbrainz.org/api/v1/96685213-a25c-4678-9a13-abd9ec81cf35/low-level
+   //GET https://acousticbrainz.org/api/v1/96685213-a25c-4678-9a13-abd9ec81cf35/high-level
+//}
