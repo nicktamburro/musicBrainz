@@ -6,16 +6,16 @@ const mb = require('musicbrainz');
 //LOOK UP RELEASE BY... what? ID?
 //and we need to get body-parser, and probably some json middleware in here...
   
-/*mb.lookupRelease('7d7eac5a-a0fc-4a2e-86c5-e8be0b85184e', ['artists'], function (error, release) {
+mb.lookupRelease('d7b3dde9-d672-4e01-a6b4-9de5cf12bf7a', ['artists'], function (error, release) {
     console.log(release);
-});*/
+});
 
 //so this above is the id that our song/artist search below gave us, but when I try to use that
 //for search, we get undefined
 
-mb.lookupRelease('283821f3-522a-45ca-a669-d74d0b4fb93a', ['artists'], function (error, release) {
+/*mb.lookupRelease('283821f3-522a-45ca-a669-d74d0b4fb93a', ['artists'], function (error, release) {
 	console.log(release);
-});
+});*/
 
 //SEARCH ARTIST
 
@@ -25,7 +25,7 @@ mb.lookupRelease('283821f3-522a-45ca-a669-d74d0b4fb93a', ['artists'], function (
 
 //SEARCH RECORDING (= search song?) , and narrow it down inside the curly braces
 
-/*mb.searchRecordings('100 mph', { artist: 'Buckwild' }, function(err, recordings){
+/*mb.searchRecordings('Ya Mama', { artist: 'The Pharcyde' }, function(err, recordings){
      console.log(recordings);
  });*/
 
