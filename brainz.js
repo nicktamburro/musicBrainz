@@ -6,21 +6,21 @@ const mb = require('musicbrainz');
 //LOOK UP RELEASE BY... what? ID?
 //and we need to get body-parser, and probably some json middleware in here...
   
-/*mb.lookupRelease('283821f3-522a-45ca-a669-d74d0b4fb93a', ['artists'], function (error, release) {
+mb.lookupRelease('7d7eac5a-a0fc-4a2e-86c5-e8be0b85184e', ['artists'], function (error, release) {
     console.log(release);
-});*/
+});
 
 //SEARCH ARTIST
 
-mb.searchArtists('Nirvana', {}, function(err, artists){
+/*mb.searchArtists('Nirvana', {}, function(err, artists){
     console.log(artists);
-});
+});/*/
 
 //SEARCH RECORDING (= search song?) , and narrow it down inside the curly braces
 
-// mb.searchRecordings('Amen, Brother', { artist: 'The Winstons' }, function(err, recordings){
-//     console.log(recordings);
-// });
+/*mb.searchRecordings('100 mph', { artist: 'Meyhem Lauren' }, function(err, recordings){
+     console.log(recordings);
+ });*/
 
 //SEARCH RELEASES
 //so the parameters to narrow it down go in the {}'s, we still have to pare down all the data we get
