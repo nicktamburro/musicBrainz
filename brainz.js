@@ -24,7 +24,9 @@ const mb = require('musicbrainz');
 
 //SEARCH RECORDING (= search song?) , and narrow it down inside the curly braces
 
+
 mb.searchRecordings('Ya Mama', { artist: 'The Pharcyde' }, function(err, recordings){
+    let data = recordings.Recording;
      console.log(recordings);
  });
 
