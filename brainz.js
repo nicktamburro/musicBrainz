@@ -12,9 +12,9 @@ const mb = require('musicbrainz');
 
 //so this above is the id that our song/artist search below gave us, but when I try to use that
 //for search, we get undefined
-mb.lookup('171305ad-1245-474f-8ac0-9bad28e8fdf0', ['artists'], function (error, release) {
+/*mb.lookup('171305ad-1245-474f-8ac0-9bad28e8fdf0', ['artists'], function (error, release) {
 	console.log(release);
-});
+});*/
 
 //SEARCH ARTIST
 
@@ -24,9 +24,9 @@ mb.lookup('171305ad-1245-474f-8ac0-9bad28e8fdf0', ['artists'], function (error, 
 
 //SEARCH RECORDING (= search song?) , and narrow it down inside the curly braces
 
-/*mb.searchRecordings('Ya Mama', { artist: 'The Pharcyde' }, function(err, recordings){
+mb.searchRecordings('Ya Mama', { artist: 'The Pharcyde' }, function(err, recordings){
      console.log(recordings);
- });*/
+ });
 
 //SEARCH RELEASES
 //so the parameters to narrow it down go in the {}'s, we still have to pare down all the data we get
