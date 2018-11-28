@@ -26,10 +26,12 @@ const mb = require('musicbrainz');
 
 
 mb.searchRecordings('Ya Mama', { artist: 'The Pharcyde' }, function(err, recordings){
-    let data = recordings.Recording;
+    for(i=0; i<recordings.length; i++){
+        console.log(i + ": " + recordings[i]);
+    }
     //dot notation not working,
     //but still can't see the very top of this object/array
-     console.log(recordings);
+     //console.log(recordings);
  });
 
 //SEARCH RELEASES
