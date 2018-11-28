@@ -25,15 +25,20 @@ const mb = require('musicbrainz');
 //SEARCH RECORDING (= search song?) , and narrow it down inside the curly braces
 
 
+//SO this whole thing would go inside a loop, or a function?
+//so we can plug in title and artist from the big array  (or I mean really from the database would be better,
+//but this way would be okay for now)
+
 mb.searchRecordings('Ya Mama', { artist: 'The Pharcyde' }, function(err, recordings){
 
     for(i=0; i<recordings.length; i++){
         //console.log(i + ": " + JSON.stringify(recordings[i]));
         console.log(i + ": " + recordings[i].title + " : " + recordings[i].id);
     }
-//okay getting closer here, we've cracked into the array
-//NOW we have to dig into the object, and pull out just the ID... 
-//tricky thing is there don't have names, but they do have array indices
+//getting closer...
+//NEXT we need to bring in the list of titles and artists from the spreadsheet,
+//and then write code to feed them all into the loop... this will take a while. 
+
 
 
 
