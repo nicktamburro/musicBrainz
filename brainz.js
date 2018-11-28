@@ -29,7 +29,7 @@ mb.searchRecordings('Ya Mama', { artist: 'The Pharcyde' }, function(err, recordi
 
     for(i=0; i<recordings.length; i++){
         //console.log(i + ": " + JSON.stringify(recordings[i]));
-        console.log(i + ": " + recordings[i].id);
+        console.log(i + ": " + recordings[i].title + " : " + recordings[i].id);
     }
 //okay getting closer here, we've cracked into the array
 //NOW we have to dig into the object, and pull out just the ID... 
