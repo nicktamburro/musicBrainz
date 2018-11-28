@@ -28,10 +28,16 @@ const mb = require('musicbrainz');
 mb.searchRecordings('Ya Mama', { artist: 'The Pharcyde' }, function(err, recordings){
 
     for(i=0; i<recordings.length; i++){
-        console.log(i + ": " + JSON.stringify(recordings[i]));
+        //console.log(i + ": " + JSON.stringify(recordings[i]));
+        console.log(i + ": " + recordings[i].id);
     }
-    //dot notation not working,
-    //but still can't see the very top of this object/array
+//okay getting closer here, we've cracked into the array
+//NOW we have to dig into the object, and pull out just the ID... 
+//tricky thing is there don't have names, but they do have array indices
+
+
+
+
      //console.log(recordings);
  });
 
