@@ -71,6 +71,12 @@ function getNewToken(oAuth2Client, callback) {
  * @see https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
  * @param {google.auth.OAuth2} auth The authenticated Google OAuth client.
  */
+
+
+
+
+
+//Here is what we change... 
 function listMajors(auth) {
   const sheets = google.sheets({version: 'v4', auth});
   sheets.spreadsheets.values.get({
@@ -82,6 +88,9 @@ function listMajors(auth) {
     if (rows.length) {
       console.log('Name, Major:');
       // Print columns A and E, which correspond to indices 0 and 4.
+      //THIS IS the real part we have to change... figure out which rows, 
+      //but also how to push them into an object in an array
+      //the right way
       rows.map((row) => {
         console.log(`${row[0]}, ${row[4]}`);
       });
