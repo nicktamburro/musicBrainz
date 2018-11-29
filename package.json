@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "brainz": "^0.2.6",
+    "googleapis": "^27.0.0",
     "musicbrainz": "^0.2.6"
   },
   "devDependencies": {},
