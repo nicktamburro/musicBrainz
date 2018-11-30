@@ -86,13 +86,20 @@ function listMajors(auth) {
     if (err) return console.log('The API returned an error: ' + err);
     const rows = res.data.values;
     if (rows.length) {
-      console.log('Name, Major:');
+      //THEIR CODEconsole.log('Name, Major:');
       // Print columns A and E, which correspond to indices 0 and 4.
       //THIS IS the real part we have to change... figure out which rows, 
       //but also how to push them into an object in an array
       //the right way
-      rows.map((row) => {
-        console.log(`${row[0]}, ${row[4]}`);
+      //THEIR CODErows.map((row) => {
+      //THEIR CODE  console.log(`${row[0]}, ${row[4]}`);
+
+      //okay it's working, but map is making it happen multiple times
+      let newArray = [];
+      rows.map((row)=>{
+          newArray.push(row[0], row[4]);
+          console.log(newArray);
+      //})
       });
     } else {
       console.log('No data found.');
