@@ -95,6 +95,7 @@ function listMajors(auth) {
       //THEIR CODE  console.log(`${row[0]}, ${row[4]}`);
 
       //okay it's working, but map is making it happen multiple times
+      //this is closer than my for loop style, so work with this one
       let newArray = [];
       rows.map((row)=>{
           newArray.push(row[0], row[4]);
