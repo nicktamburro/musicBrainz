@@ -78,6 +78,7 @@ function getNewToken(oAuth2Client, callback) {
 
 //Here is what we change... 
 function listMajors(auth) {
+let newArray = [];
   const sheets = google.sheets({version: 'v4', auth});
   sheets.spreadsheets.values.get({
     spreadsheetId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms',
@@ -91,19 +92,29 @@ function listMajors(auth) {
       //THIS IS the real part we have to change... figure out which rows, 
       //but also how to push them into an object in an array
       //the right way
-      //THEIR CODErows.map((row) => {
+      //THEIR CODE  rows.map((row) => {
       //THEIR CODE  console.log(`${row[0]}, ${row[4]}`);
+      //
+      //SOOOOO we're looping through ROW numbers, but always taking
+      //column 0 and 4
 
       //okay it's working, but map is making it happen multiple times
       //this is closer than my for loop style, so work with this one
-      let newArray = [];
+
+      //it probably needs to be a double loop, if it's a loop
+      //but listen, map is working, just have to shape it a little
+      //differently
+      
+      //here "row" is just like "i" in a loop...
+      //but so why does it do it every time? 
       rows.map((row)=>{
           newArray.push(row[0], row[4]);
-          console.log(newArray);
+          
       //})
       });
     } else {
       console.log('No data found.');
     }
+    console.log(newArray);
   });
 }
