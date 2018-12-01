@@ -96,9 +96,7 @@ let newArray = [];
       //THEIR CODE  console.log(`${row[0]}, ${row[4]}`);
       
       rows.map((row)=>{
-          newArray.push(row[0], row[4]);
-          //noe it works, but it just has all the data mixed up...
-          //this is why in the real version we'll be pushing it into a db
+          newArray.push({student: row[0], major: row[4]});
       //})
       });
     } else {
