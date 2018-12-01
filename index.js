@@ -94,22 +94,11 @@ let newArray = [];
       //the right way
       //THEIR CODE  rows.map((row) => {
       //THEIR CODE  console.log(`${row[0]}, ${row[4]}`);
-      //
-      //SOOOOO we're looping through ROW numbers, but always taking
-      //column 0 and 4
-
-      //okay it's working, but map is making it happen multiple times
-      //this is closer than my for loop style, so work with this one
-
-      //it probably needs to be a double loop, if it's a loop
-      //but listen, map is working, just have to shape it a little
-      //differently
       
-      //here "row" is just like "i" in a loop...
-      //but so why does it do it every time? 
       rows.map((row)=>{
           newArray.push(row[0], row[4]);
-          
+          //noe it works, but it just has all the data mixed up...
+          //this is why in the real version we'll be pushing it into a db
       //})
       });
     } else {
