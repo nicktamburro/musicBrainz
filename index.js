@@ -97,6 +97,8 @@ let newArray = [];
       
       rows.map((row)=>{
           newArray.push({student: row[0], major: row[4]});
+          //COOL! so when we switch to the real sheet
+          //we just make the objects as big as we need, with whatever rows we want
       //})
       });
     } else {
