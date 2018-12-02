@@ -99,11 +99,18 @@ function listMajors(auth) {
 }
 
 //now we make a function to query MB
+//so it's an array full of objects... 
 function getIDs(songs){
   if(songs.length){
 
-  } else {
-    console.log('No song data found.');
-  }
+    mb.searchRecordings('Ya Mama', { artist: 'The Pharcyde' }, function(err, recordings){
 
+
+
+    });
+
+  }else{
+    console.log("No song data found.");
+  }
 }
+  
