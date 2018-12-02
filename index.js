@@ -89,7 +89,7 @@ let newArray = [];
     if (rows.length) {
  //HERE's where we're actually pulling the data:       
       rows.map((row)=>{
-          newArray.push({artist: row[0], title: row[9]});
+          newArray.push({artist: row[0], date: row[2], title: row[9]});
       });
     } else {
       console.log('No data found.');
