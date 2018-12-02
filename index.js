@@ -67,11 +67,16 @@ function getNewToken(oAuth2Client, callback) {
   });
 }
 
-//Here is what we change... 
-function listMajors(auth) {
+//-------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------
+//above is just to get the Google Sheets API working, here starts our stuff:
+//-------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------
 
 let newArray = [];
 
+//Here is what we change... 
+function listMajors(auth) {
   const sheets = google.sheets({version: 'v4', auth});
   sheets.spreadsheets.values.get({
     spreadsheetId: '1RrySjT_gzBzMs5gDTPN-J66dD9RPCI-p3Jgg14uMCVU',
@@ -79,6 +84,7 @@ let newArray = [];
   }, (err, res) => {
     if (err) return console.log('The API returned an error: ' + err);
     const rows = res.data.values;
+
     if (rows.length) {
 
  //HERE's where we're actually pulling the data:       
@@ -86,10 +92,18 @@ let newArray = [];
           newArray.push({artist: row[0], date: row[2], title: row[9]});
       });
     } else {
-      console.log('No data found.');
+      console.log('No spreadsheet data found.');
     }
     console.log(newArray);
   });
 }
 
 //now we make a function to query MB
+function getIDs(songs){
+  if(songs.length){
+
+  } else {
+    console.log('No song data found.');
+  }
+
+}
