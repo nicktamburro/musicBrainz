@@ -81,8 +81,8 @@ function listMajors(auth) {
 let newArray = [];
   const sheets = google.sheets({version: 'v4', auth});
   sheets.spreadsheets.values.get({
-    spreadsheetId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms',
-    range: 'Class Data!A2:E',
+    spreadsheetId: '1RrySjT_gzBzMs5gDTPN-J66dD9RPCI-p3Jgg14uMCVU',
+    range: 'Class Data!C2:L',
   }, (err, res) => {
     if (err) return console.log('The API returned an error: ' + err);
     const rows = res.data.values;
