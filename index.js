@@ -1,4 +1,5 @@
 const fs = require('fs');
+const mb = require('musicbrainz');
 const readline = require('readline');
 const {google} = require('googleapis');
 
@@ -66,19 +67,11 @@ function getNewToken(oAuth2Client, callback) {
   });
 }
 
-/**
- * Prints the names and majors of students in a sample spreadsheet:
- * @see https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
- * @param {google.auth.OAuth2} auth The authenticated Google OAuth client.
- */
-
-
-
-
-
 //Here is what we change... 
 function listMajors(auth) {
+
 let newArray = [];
+
   const sheets = google.sheets({version: 'v4', auth});
   sheets.spreadsheets.values.get({
     spreadsheetId: '1RrySjT_gzBzMs5gDTPN-J66dD9RPCI-p3Jgg14uMCVU',
@@ -87,6 +80,7 @@ let newArray = [];
     if (err) return console.log('The API returned an error: ' + err);
     const rows = res.data.values;
     if (rows.length) {
+
  //HERE's where we're actually pulling the data:       
       rows.map((row)=>{
           newArray.push({artist: row[0], date: row[2], title: row[9]});
@@ -97,3 +91,5 @@ let newArray = [];
     console.log(newArray);
   });
 }
+
+//now we make a function to query MB
