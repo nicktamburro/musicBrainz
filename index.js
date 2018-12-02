@@ -82,7 +82,7 @@ let newArray = [];
   const sheets = google.sheets({version: 'v4', auth});
   sheets.spreadsheets.values.get({
     spreadsheetId: '1RrySjT_gzBzMs5gDTPN-J66dD9RPCI-p3Jgg14uMCVU',
-    range: 'Class Data!C2:L',
+    range: 'C2:L',
   }, (err, res) => {
     if (err) return console.log('The API returned an error: ' + err);
     const rows = res.data.values;
@@ -96,7 +96,7 @@ let newArray = [];
       //THEIR CODE  console.log(`${row[0]}, ${row[4]}`);
       
       rows.map((row)=>{
-          newArray.push({student: row[0], major: row[4]});
+          newArray.push({artist: row[0], title: row[9]});
           //COOL! so when we switch to the real sheet
           //we just make the objects as big as we need, with whatever rows we want
       //})
