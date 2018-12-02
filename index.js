@@ -94,7 +94,7 @@ function listMajors(auth) {
     } else {
       console.log('No spreadsheet data found.');
     }
-    console.log(newArray);
+    getIDs(newArray);
   });
 }
 
@@ -103,12 +103,15 @@ function listMajors(auth) {
 function getIDs(songs){
   if(songs.length){
 
-    mb.searchRecordings('Ya Mama', { artist: 'The Pharcyde' }, function(err, recordings){
+    for(i=0 ; i < 3; i++){
 
+    mb.searchRecordings(songs[i].title, { artist: songs[i].artist }, function(err, recordings){
 
-
+      for(i=0; i<recordings.length; i++){
+        console.log(i + ": " + recordings[i].title + " : " + recordings[i].id);
+      }
     });
-
+    }
   }else{
     console.log("No song data found.");
   }
