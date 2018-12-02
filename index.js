@@ -99,12 +99,14 @@ function listMajors(auth) {
 }
 
 //now we make a function to query MB
-//so it's an array full of objects... 
+//
+//something's off here...
 function getIDs(songs){
   if(songs.length){
 
-    for(i=0 ; i < 3; i++){
+    for(i=0 ; i < 15; i++){
 
+//working! just need to finesse which fields to show... id's are working though!
     mb.searchRecordings(songs[i].title, { artist: songs[i].artist }, function(err, recordings){
 
       for(i=0; i<recordings.length; i++){
