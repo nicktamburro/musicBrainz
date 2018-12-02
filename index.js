@@ -87,19 +87,9 @@ let newArray = [];
     if (err) return console.log('The API returned an error: ' + err);
     const rows = res.data.values;
     if (rows.length) {
-      //THEIR CODEconsole.log('Name, Major:');
-      // Print columns A and E, which correspond to indices 0 and 4.
-      //THIS IS the real part we have to change... figure out which rows, 
-      //but also how to push them into an object in an array
-      //the right way
-      //THEIR CODE  rows.map((row) => {
-      //THEIR CODE  console.log(`${row[0]}, ${row[4]}`);
-      
+ //HERE's where we're actually pulling the data:       
       rows.map((row)=>{
           newArray.push({artist: row[0], title: row[9]});
-          //COOL! so when we switch to the real sheet
-          //we just make the objects as big as we need, with whatever rows we want
-      //})
       });
     } else {
       console.log('No data found.');
