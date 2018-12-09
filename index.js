@@ -105,13 +105,17 @@ function listMajors(auth) {
 function getIDs(songs){
   if(songs.length){
 
+//last thing we do is take of the loop limits
     for(i=0 ; i < 15; i++){
 
-//working! just need to finesse which fields to show... id's are working though!
+//now we need to
+//1. verify that the IDs we're getting are legit
+//2. put them into a DB
     mb.searchRecordings(songs[i].title, { artist: songs[i].artist }, function(err, recordings){
 
       for(i=0; i<recordings.length; i++){
-        console.log(i + ". Title: " + newArray[i].title + " : " + recordings[i].id);
+        console.log(i + ". Title: " + newArray[i].title + " Artist: " + 
+        newArray[i].artist + " ID: " + recordings[i].id);
       }
     });
     }
