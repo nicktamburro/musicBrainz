@@ -113,6 +113,7 @@ function getIDs(songs){
 //2. put them into a DB
     mb.searchRecordings(songs[i].title, { artist: songs[i].artist }, function(err, recordings){
 
+//just verify that the relationships between newArray[i] and recordings[i] actually match
       for(i=0; i<recordings.length; i++){
         console.log(i + ". Title: " + newArray[i].title + " Artist: " + 
         newArray[i].artist + " ID: " + recordings[i].id);
