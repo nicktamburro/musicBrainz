@@ -94,6 +94,7 @@ function listMajors(auth) {
     } else {
       console.log('No spreadsheet data found.');
     }
+    //console.log(newArray);
     getIDs(newArray);
   });
 }
@@ -110,7 +111,7 @@ function getIDs(songs){
     mb.searchRecordings(songs[i].title, { artist: songs[i].artist }, function(err, recordings){
 
       for(i=0; i<recordings.length; i++){
-        console.log(i + ". Title: " + recordings[i].title + " : " + recordings[i].id);
+        console.log(i + ". Title: " + newArray[i].title + " : " + recordings[i].id);
       }
     });
     }
