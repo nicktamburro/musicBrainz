@@ -110,7 +110,7 @@ function getIDs(songs){
     mb.searchRecordings(songs[i].title, { artist: songs[i].artist }, function(err, recordings){
 
       for(i=0; i<recordings.length; i++){
-        console.log(i + "Title: " + recordings[i].title + " : " + recordings[i].id);
+        console.log(i + ". Title: " + recordings[i].title + " : " + recordings[i].id);
       }
     });
     }
