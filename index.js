@@ -111,6 +111,9 @@ function getIDs(songs){
 //now we need to
 //1. verify that the IDs we're getting are legit
 //2. put them into a DB
+
+
+//no no no no don't even need a DB, just write it back to the spreadsheet
     mb.searchRecordings(songs[i].title, { artist: songs[i].artist }, function(err, recordings){
 
 //just verify that the relationships between newArray[i] and recordings[i] actually match
