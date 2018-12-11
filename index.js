@@ -114,6 +114,8 @@ function getIDs(songs){
 
 
 //no no no no don't even need a DB, just write it back to the spreadsheet
+//okay yeah, batchUpdate might be what we need... just read the API docs
+//UPDATE: not batchUpdate
     mb.searchRecordings(songs[i].title, { artist: songs[i].artist }, function(err, recordings){
 
 //just verify that the relationships between newArray[i] and recordings[i] actually match
