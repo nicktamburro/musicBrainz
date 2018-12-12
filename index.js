@@ -117,6 +117,9 @@ function getIDs(songs){
 //UPDATE: not batchUpdate
     mb.searchRecordings(songs[i].title, { artist: songs[i].artist }, function(err, recordings){
 
+//TODO, here we want to do just one recording, to see if we can get the right ID, 
+//THEN we can do the loop. 
+
 //just verify that the relationships between newArray[i] and recordings[i] actually match
       for(i=0; i<recordings.length; i++){
         console.log(i + ". Title: " + newArray[i].title + " Artist: " + 
