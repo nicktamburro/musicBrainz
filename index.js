@@ -110,8 +110,7 @@ function getIDs(songs){
 
 //now we need to
 //1. verify that the IDs we're getting are legit
-//2. put them into a DB
-
+//okay, it looks like the id's are not matching right
 
 //no no no no don't even need a DB, just write it back to the spreadsheet
 //okay yeah, batchUpdate might be what we need... just read the API docs
