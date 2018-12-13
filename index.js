@@ -14,7 +14,7 @@ const TOKEN_PATH = 'token.json';
 fs.readFile('credentials.json', (err, content) => {
   if (err) return console.log('Error loading client secret file:', err);
   // Authorize a client with credentials, then call the Google Sheets API.
-  authorize(JSON.parse(content), listMajors);
+  authorize(JSON.parse(content), getSongInfo);
 });
 
 /**
@@ -75,8 +75,7 @@ function getNewToken(oAuth2Client, callback) {
 
 let newArray = [];
 
-//Here is what we change... 
-function listMajors(auth) {
+function getSongInfo(auth) {
   const sheets = google.sheets({version: 'v4', auth});
   sheets.spreadsheets.values.get({
     spreadsheetId: '1RrySjT_gzBzMs5gDTPN-J66dD9RPCI-p3Jgg14uMCVU',
@@ -110,11 +109,7 @@ function getIDs(songs){
 
 //now we need to
 //1. verify that the IDs we're getting are legit
-//okay, it looks like the id's are not matching right
 
-//no no no no don't even need a DB, just write it back to the spreadsheet
-//okay yeah, batchUpdate might be what we need... just read the API docs
-//UPDATE: not batchUpdate
     mb.searchRecordings(songs[i].title, { artist: songs[i].artist }, function(err, recordings){
 
 //TODO, here we want to do just one recording, to see if we can get the right ID, 
